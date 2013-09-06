@@ -1,0 +1,24 @@
+{
+  "name": "bootstrap-datetimepicker",
+  "version": "0.0.11",
+  "homepage": "https://github.com/fishrod-interactive/bootstrap-datetimepicker",
+  "authors": [
+    "gavin.williams <gavin.williams@fishrod.co.uk>"
+  ],
+  "description": "Bootstrap based date time picker",
+  "main": [
+    "build/css/bootstrap-datetimepicker.min.css",
+    "build/js/bootstrap-datetimepicker.min.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.0"
+  }
+}
