@@ -29,7 +29,7 @@
 
     // Picker object
     var smartPhone = (window.orientation != undefined);
-    var clickAction = (true == smartPhone) ? 'touchend' : '_click';
+    var clickAction = (true == smartPhone) ? 'touchend' : 'click';
     var DateTimePicker = function (element, options) {
         this.id = dpgId++;
         this.init(element, options);
