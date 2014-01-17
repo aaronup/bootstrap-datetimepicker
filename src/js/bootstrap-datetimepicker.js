@@ -29,6 +29,7 @@
 
     // Picker object
     var smartPhone = (window.orientation != undefined);
+    var clickAction = (true == smartPhone) ? 'touchend' : '_click';
     var DateTimePicker = function (element, options) {
         this.id = dpgId++;
         this.init(element, options);
@@ -955,9 +956,9 @@
         _attachDatePickerEvents: function () {
             var self = this;
             // this handles date picker clicks
-            this.widget.on('click', '.datepicker *', $.proxy(this.click, this));
+            this.widget.on(clickAction, '.datepicker *', $.proxy(this.click, this));
             // this handles time picker clicks
-            this.widget.on('click', '[data-action]', $.proxy(this.doAction, this));
+            this.widget.on(clickAction, '[data-action]', $.proxy(this.doAction, this));
             this.widget.on('mousedown', $.proxy(this.stopEvent, this));
             if (this.pickDate && this.pickTime) {
                 this.widget.on('click.togglePicker', '.accordion-toggle', function (e) {
@@ -999,9 +1000,9 @@
                     }, 'input');
                 }
                 if (this.component) {
-                    this.component.on('click', $.proxy(this.show, this));
+                    this.component.on(clickAction, $.proxy(this.show, this));
                 } else {
-                    this.$element.on('click', $.proxy(this.show, this));
+                    this.$element.on(clickAction, $.proxy(this.show, this));
                 }
             }
         },
@@ -1016,8 +1017,8 @@
         },
 
         _detachDatePickerEvents: function () {
-            this.widget.off('click', '.datepicker *', this.click);
-            this.widget.off('click', '[data-action]');
+            this.widget.off(clickAction, '.datepicker *', this.click);
+            this.widget.off(clickAction, '[data-action]');
             this.widget.off('mousedown', this.stopEvent);
             if (this.pickDate && this.pickTime) {
                 this.widget.off('click.togglePicker');
@@ -1044,9 +1045,9 @@
                     }, 'input');
                 }
                 if (this.component) {
-                    this.component.off('click', this.show);
+                    this.component.off(clickAction, this.show);
                 } else {
-                    this.$element.off('click', this.show);
+                    this.$element.off(clickAction, this.show);
                 }
             }
         },
