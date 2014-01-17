@@ -1,9 +1,10 @@
 {
   "name": "bootstrap-datetimepicker",
-  "version": "0.0.11",
-  "homepage": "https://github.com/fishrod-interactive/bootstrap-datetimepicker",
+  "version": "0.0.14",
+  "homepage": "https://github.com/aaronup/bootstrap-datetimepicker",
   "authors": [
-    "gavin.williams <gavin.williams@fishrod.co.uk>"
+    "gavin.williams <gavin.williams@fishrod.co.uk>",
+    "aaron.upshaw <aaron@touchto.io>"
   ],
   "description": "Bootstrap based date time picker",
   "main": [
@@ -19,6 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.0"
+    "bootstrap": "~3.0.x"
   }
 }
